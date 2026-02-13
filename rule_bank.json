@@ -13,18 +13,18 @@
           "name": "Chuyển tiền / Thanh toán",
           "type": "expense",
           "titleMatch": null,
-          "bodyMatch": "(chuyển|thanh toán|chi|trừ|payment)",
+          "bodyMatch": "(chuyển|chuyen|thanh toán|thanh toan|chi|trừ|tru|payment|đã thanh toán|da thanh toan|đã chuyển|da chuyen)",
           "bodyExclude": "(khuyến mãi|thất bại|không thành công|thưởng|voucher|ưu đãi|giảm giá)",
-          "amountPattern": "([\\d,.]+)\\s*(đ|vnd|vnđ)",
+          "amountPattern": "([\\d.,]+)\\s*(đ|₫|vnd|vnđ|VND|VNĐ)",
           "descriptionPattern": null
         },
         {
           "name": "Nhận tiền",
           "type": "income",
           "titleMatch": null,
-          "bodyMatch": "(nhận|cộng|được|receive)",
+          "bodyMatch": "(nhận|nhan|cộng|cong|được|duoc|receive|hoàn tiền|hoan tien|refund)",
           "bodyExclude": "(khuyến mãi|thất bại|không thành công|thưởng|voucher|ưu đãi|giảm giá)",
-          "amountPattern": "([\\d,.]+)\\s*(đ|vnd|vnđ)",
+          "amountPattern": "([\\d.,]+)\\s*(đ|₫|vnd|vnđ|VND|VNĐ)",
           "descriptionPattern": null
         }
       ]
@@ -34,7 +34,7 @@
       "name": "Vietcombank",
       "packageName": "com.VCB",
       "enabled": true,
-      "titleFilter": "(biến động|bien dong|giao dịch|GD)",
+      "titleFilter": "(biến động|bien dong|thay đổi số dư|thay doi so du|số dư|so du|giao dịch|giao dich|GD|TK)",
       "rules": [
         {
           "name": "Biến động số dư (có dấu +/-)",
@@ -42,8 +42,8 @@
           "titleMatch": null,
           "bodyMatch": null,
           "bodyExclude": null,
-          "amountPattern": "([-+])([\\d,.]+)\\s*(VND|đ)",
-          "descriptionPattern": "(?:ND|Noi dung|N\\.D|Nội dung)[:\\s]+(.+?)(?:\\.|\\n|$)"
+          "amountPattern": "([-+])([\\d.,]+)\\s*(VND|VNĐ|vnd|vnđ|đ|₫)",
+          "descriptionPattern": "(?:ND|Noi dung|N\\.D|Nội dung|Noi dung GD|Nội dung GD|Noi dung giao dich|Nội dung giao dịch)[:\\s]+(.+?)(?:\\.|;|\\n|$)"
         }
       ]
     },
@@ -52,7 +52,7 @@
       "name": "MB Bank",
       "packageName": "com.mbmobile",
       "enabled": true,
-      "titleFilter": "(biến động|bien dong|giao dịch|GD|TK)",
+      "titleFilter": "(biến động|bien dong|thay đổi số dư|thay doi so du|số dư|so du|giao dịch|giao dich|GD|TK)",
       "rules": [
         {
           "name": "Biến động số dư",
@@ -60,8 +60,8 @@
           "titleMatch": null,
           "bodyMatch": null,
           "bodyExclude": null,
-          "amountPattern": "([-+])([\\d,.]+)\\s*(VND|đ)",
-          "descriptionPattern": "(?:ND|Noi dung|N\\.D|Nội dung)[:\\s]+(.+?)(?:\\.|\\n|$)"
+          "amountPattern": "([-+])([\\d.,]+)\\s*(VND|VNĐ|vnd|vnđ|đ|₫)",
+          "descriptionPattern": "(?:ND|Noi dung|N\\.D|Nội dung|Noi dung GD|Nội dung GD|Noi dung giao dich|Nội dung giao dịch)[:\\s]+(.+?)(?:\\.|;|\\n|$)"
         }
       ]
     },
@@ -70,7 +70,7 @@
       "name": "Techcombank",
       "packageName": "vn.com.techcombank.bb.app",
       "enabled": true,
-      "titleFilter": "(biến động|bien dong|giao dịch|GD|TK)",
+      "titleFilter": "(biến động|bien dong|thay đổi số dư|thay doi so du|số dư|so du|giao dịch|giao dich|GD|TK)",
       "rules": [
         {
           "name": "Biến động số dư",
@@ -78,8 +78,8 @@
           "titleMatch": null,
           "bodyMatch": null,
           "bodyExclude": null,
-          "amountPattern": "([-+])([\\d,.]+)\\s*(VND|đ)",
-          "descriptionPattern": "(?:ND|Noi dung|N\\.D|Nội dung)[:\\s]+(.+?)(?:\\.|\\n|$)"
+          "amountPattern": "([-+])([\\d.,]+)\\s*(VND|VNĐ|vnd|vnđ|đ|₫)",
+          "descriptionPattern": "(?:ND|Noi dung|N\\.D|Nội dung|Noi dung GD|Nội dung GD|Noi dung giao dich|Nội dung giao dịch)[:\\s]+(.+?)(?:\\.|;|\\n|$)"
         }
       ]
     },
@@ -88,7 +88,7 @@
       "name": "BIDV",
       "packageName": "com.vnpay.bidv",
       "enabled": true,
-      "titleFilter": "(biến động|bien dong|giao dịch|GD|TK)",
+      "titleFilter": "(biến động|bien dong|thay đổi số dư|thay doi so du|số dư|so du|giao dịch|giao dich|GD|TK)",
       "rules": [
         {
           "name": "Biến động số dư",
@@ -96,8 +96,8 @@
           "titleMatch": null,
           "bodyMatch": null,
           "bodyExclude": null,
-          "amountPattern": "([-+])([\\d,.]+)\\s*(VND|đ)",
-          "descriptionPattern": "(?:ND|Noi dung|N\\.D|Nội dung|Lý do|Ly do)[:\\s]+(.+?)(?:\\.|\\n|$)"
+          "amountPattern": "([-+])([\\d.,]+)\\s*(VND|VNĐ|vnd|vnđ|đ|₫)",
+          "descriptionPattern": "(?:ND|Noi dung|N\\.D|Nội dung|Noi dung GD|Nội dung GD|Noi dung giao dich|Nội dung giao dịch|Lý do|Ly do)[:\\s]+(.+?)(?:\\.|;|\\n|$)"
         }
       ]
     },
@@ -106,7 +106,7 @@
       "name": "TPBank",
       "packageName": "com.tpb.mb.gprsandroid",
       "enabled": true,
-      "titleFilter": "(biến động|bien dong|giao dịch|GD|TK)",
+      "titleFilter": "(biến động|bien dong|thay đổi số dư|thay doi so du|số dư|so du|giao dịch|giao dich|GD|TK)",
       "rules": [
         {
           "name": "Biến động số dư",
@@ -114,8 +114,8 @@
           "titleMatch": null,
           "bodyMatch": null,
           "bodyExclude": null,
-          "amountPattern": "([-+])([\\d,.]+)\\s*(VND|đ)",
-          "descriptionPattern": "(?:ND|Noi dung|N\\.D|Nội dung)[:\\s]+(.+?)(?:\\.|\\n|$)"
+          "amountPattern": "([-+])([\\d.,]+)\\s*(VND|VNĐ|vnd|vnđ|đ|₫)",
+          "descriptionPattern": "(?:ND|Noi dung|N\\.D|Nội dung|Noi dung GD|Nội dung GD|Noi dung giao dich|Nội dung giao dịch)[:\\s]+(.+?)(?:\\.|;|\\n|$)"
         }
       ]
     },
@@ -124,25 +124,25 @@
       "name": "VietinBank",
       "packageName": "com.vietinbank.ipay",
       "enabled": true,
-      "titleFilter": "(biến động|bien dong|Biến động)",
+      "titleFilter": "(biến động|bien dong|Biến động|iPay|IPay|ipay)",
       "rules": [
         {
           "name": "Biến động số dư iPay",
           "type": "auto",
           "titleMatch": null,
-          "bodyMatch": "Giao d[iị]ch",
+          "bodyMatch": "(Giao d[iị]ch|Ph[áa]t sinh|Phat sinh|PS)",
           "bodyExclude": null,
-          "amountPattern": "Giao d[iị]ch[:\\s]*([-+])([\\d,.]+)\\s*(VND|đ)",
-          "descriptionPattern": "N[oộ]i dung[:\\s]+(.+?)(?:\\n|$)"
+          "amountPattern": "(?:Giao d[iị]ch|Ph[áa]t sinh|Phat sinh|PS)[:\\s]*([-+])([\\d.,]+)\\s*(VND|VNĐ|vnd|vnđ|đ|₫)",
+          "descriptionPattern": "N[oộ]i dung[:\\s]+(.+?)(?:\\.|;|\\n|$)"
         }
       ]
     },
     {
       "id": "acb",
       "name": "ACB",
-      "packageName": "vn.com.acb.acbmobile",
+      "packageName": "mobile.acb.com.vn",
       "enabled": true,
-      "titleFilter": "(biến động|bien dong|giao dịch|GD|TK)",
+      "titleFilter": "(biến động|bien dong|thay đổi số dư|thay doi so du|số dư|so du|giao dịch|giao dich|GD|TK)",
       "rules": [
         {
           "name": "Biến động số dư",
@@ -150,17 +150,17 @@
           "titleMatch": null,
           "bodyMatch": null,
           "bodyExclude": null,
-          "amountPattern": "([-+])([\\d,.]+)\\s*(VND|đ)",
-          "descriptionPattern": "(?:ND|Noi dung|N\\.D|Nội dung)[:\\s]+(.+?)(?:\\.|\\n|$)"
+          "amountPattern": "([-+])([\\d.,]+)\\s*(VND|VNĐ|vnd|vnđ|đ|₫)",
+          "descriptionPattern": "(?:ND|Noi dung|N\\.D|Nội dung|Noi dung GD|Nội dung GD|Noi dung giao dich|Nội dung giao dịch)[:\\s]+(.+?)(?:\\.|;|\\n|$)"
         }
       ]
     },
     {
       "id": "sacombank",
       "name": "Sacombank",
-      "packageName": "com.sacombank.ewallet",
+      "packageName": "src.com.sacombank",
       "enabled": true,
-      "titleFilter": "(biến động|bien dong|giao dịch|GD|TK)",
+      "titleFilter": "(biến động|bien dong|thay đổi số dư|thay doi so du|số dư|so du|giao dịch|giao dich|GD|TK)",
       "rules": [
         {
           "name": "Biến động số dư",
@@ -168,17 +168,17 @@
           "titleMatch": null,
           "bodyMatch": null,
           "bodyExclude": null,
-          "amountPattern": "([-+])([\\d,.]+)\\s*(VND|đ)",
-          "descriptionPattern": "(?:ND|Noi dung|N\\.D|Nội dung)[:\\s]+(.+?)(?:\\.|\\n|$)"
+          "amountPattern": "([-+])([\\d.,]+)\\s*(VND|VNĐ|vnd|vnđ|đ|₫)",
+          "descriptionPattern": "(?:ND|Noi dung|N\\.D|Nội dung|Noi dung GD|Nội dung GD|Noi dung giao dich|Nội dung giao dịch)[:\\s]+(.+?)(?:\\.|;|\\n|$)"
         }
       ]
     },
     {
       "id": "agribank",
       "name": "Agribank",
-      "packageName": "com.agribank.agribankplus",
+      "packageName": "com.vnpay.Agribank3g",
       "enabled": true,
-      "titleFilter": "(biến động|bien dong|giao dịch|GD|TK)",
+      "titleFilter": "(biến động|bien dong|thay đổi số dư|thay doi so du|số dư|so du|giao dịch|giao dich|GD|TK)",
       "rules": [
         {
           "name": "Biến động số dư",
@@ -186,8 +186,8 @@
           "titleMatch": null,
           "bodyMatch": null,
           "bodyExclude": null,
-          "amountPattern": "([-+])([\\d,.]+)\\s*(VND|đ)",
-          "descriptionPattern": "(?:ND|Noi dung|N\\.D|Nội dung)[:\\s]+(.+?)(?:\\.|\\n|$)"
+          "amountPattern": "([-+])([\\d.,]+)\\s*(VND|VNĐ|vnd|vnđ|đ|₫)",
+          "descriptionPattern": "(?:ND|Noi dung|N\\.D|Nội dung|Noi dung GD|Nội dung GD|Noi dung giao dich|Nội dung giao dịch)[:\\s]+(.+?)(?:\\.|;|\\n|$)"
         }
       ]
     }
