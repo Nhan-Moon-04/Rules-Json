@@ -120,32 +120,23 @@
       ]
     },
     {
-      "id": "vietinbank",
-      "name": "VietinBank",
-      "packageName": "com.vietinbank.ipay",
-      "enabled": true,
-      "titleFilter": "(biến động|bien dong|Biến động|iPay|IPay|ipay|số dư|so du|VietinBank)",
-      "rules": [
-        {
-          "name": "Biến động số dư iPay (mẫu mới)",
-          "type": "auto",
-          "titleMatch": "(Biến động số dư|Bien dong so du)",
-          "bodyMatch": "(VietinBank[:\\s]|TK[:\\s]|GD[:\\s]|SDC[:\\s]|ND[:\\s])",
-          "bodyExclude": null,
-          "amountPattern": "GD[:\\s]*([-+])\\s*([\\d.,]+)\\s*(VND|VNĐ|vnd|vnđ|đ|₫)",
-          "descriptionPattern": "ND[:\\s]+(.+?)(?:\\n|$)"
-        },
-        {
-          "name": "Biến động số dư iPay (mẫu cũ)",
-          "type": "auto",
-          "titleMatch": null,
-          "bodyMatch": "(Giao d[iị]ch|Ph[áa]t sinh|Phat sinh|PS|GD)",
-          "bodyExclude": null,
-          "amountPattern": "(?:Giao d[iị]ch|Ph[áa]t sinh|Phat sinh|PS|GD)[:\\s]*([-+])([\\d.,]+)\\s*(VND|VNĐ|vnd|vnđ|đ|₫)",
-          "descriptionPattern": "(?:ND|N[oộ]i dung)[:\\s]+(.+?)(?:\\n|$)"
-        }
-      ]
-    },
+  "id": "vietinbank",
+  "name": "VietinBank",
+  "packageName": "com.vietinbank.ipay",
+  "enabled": true,
+  "titleFilter": "(biến động|bien dong|thay đổi số dư|thay doi so du|số dư|so du|giao dịch|giao dich|GD|TK|iPay|IPay|ipay)",
+  "rules": [
+    {
+      "name": "Biến động số dư",
+      "type": "auto",
+      "titleMatch": null,
+      "bodyMatch": null,
+      "bodyExclude": null,
+      "amountPattern": "([-+])([\\d.,]+)\\s*(VND|VNĐ|vnd|vnđ|đ|₫)",
+      "descriptionPattern": "(?:ND|N\\.D|Noi dung|Nội dung|Noi dung GD|Nội dung GD|Noi dung giao dich|Nội dung giao dịch)[:\\s]+(.+?)(?:\\n|$)"
+    }
+  ]
+},
     {
       "id": "acb",
       "name": "ACB",
