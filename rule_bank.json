@@ -120,23 +120,23 @@
       ]
     },
     {
-      "id": "vietinbank",
-      "name": "VietinBank",
-      "packageName": "com.vietinbank.ipay",
-      "enabled": true,
-      "titleFilter": "(biến động|bien dong|Biến động|iPay|IPay|ipay)",
-      "rules": [
-        {
-          "name": "Biến động số dư iPay",
-          "type": "auto",
-          "titleMatch": null,
-          "bodyMatch": "(Giao d[iị]ch|Ph[áa]t sinh|Phat sinh|PS)",
-          "bodyExclude": null,
-          "amountPattern": "(?:Giao d[iị]ch|Ph[áa]t sinh|Phat sinh|PS)[:\\s]*([-+])([\\d.,]+)\\s*(VND|VNĐ|vnd|vnđ|đ|₫)",
-          "descriptionPattern": "N[oộ]i dung[:\\s]+(.+?)(?:\\.|;|\\n|$)"
-        }
-      ]
-    },
+          "id": "vietinbank",
+          "name": "VietinBank",
+          "packageName": "com.vietinbank.ipay",
+          "enabled": true,
+          "titleFilter": "(biến động|bien dong|iPay|IPay|ipay)",
+          "rules": [
+            {
+              "name": "Biến động số dư iPay (new)",
+              "type": "auto",
+              "titleMatch": null,
+              "bodyMatch": "(GD:|ND:)",
+              "bodyExclude": null,
+              "amountPattern": "GD[:\\s]*([-+])([\\d.,]+)\\s*(VND|VNĐ|vnd|vnđ)?",
+              "descriptionPattern": "ND[:\\s]*(.+?)(?:\\n|$)"
+            }
+          ]
+        },
     {
       "id": "acb",
       "name": "ACB",
