@@ -30,24 +30,6 @@
       ]
     },
     {
-      "id": "vcb",
-      "name": "Vietcombank",
-      "packageName": "com.VCB",
-      "enabled": true,
-      "titleFilter": "(biến động|bien dong|thay đổi số dư|thay doi so du|số dư|so du|giao dịch|giao dich|GD|TK)",
-      "rules": [
-        {
-          "name": "Biến động số dư (có dấu +/-)",
-          "type": "auto",
-          "titleMatch": null,
-          "bodyMatch": null,
-          "bodyExclude": null,
-          "amountPattern": "([-+])([\\d.,]+)\\s*(VND|VNĐ|vnd|vnđ|đ|₫)",
-          "descriptionPattern": "(?:ND|Noi dung|N\\.D|Nội dung|Noi dung GD|Nội dung GD|Noi dung giao dich|Nội dung giao dịch)[:\\s]+(.+?)(?:\\.|;|\\n|$)"
-        }
-      ]
-    },
-    {
       "id": "mbbank",
       "name": "MB Bank",
       "packageName": "com.mbmobile",
