@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "lastUpdated": "2026-04-24",
+  "lastUpdated": "2026-08-08",
   "banks": [
     {
       "id": "momo",
@@ -30,6 +30,24 @@
       ]
     },
     {
+      "id": "vcb",
+      "name": "Vietcombank",
+      "packageName": "com.VCB",
+      "enabled": true,
+      "titleFilter": null,
+      "rules": [
+        {
+          "name": "Thông báo giao dịch VCB",
+          "type": "auto",
+          "titleMatch": "(Thông báo VCB|Thong bao VCB|VCB Digibank|VCB)",
+          "bodyMatch": "(Số dư TK VCB|So du TK VCB)",
+          "bodyExclude": null,
+          "amountPattern": "([-+])\\s*([\\d.,]+)\\s*(VND|VNĐ|vnd|vnđ|đ|₫)",
+          "descriptionPattern": "(?:Ref|ND|N\\.D|Noi dung|Nội dung|Noi dung GD|Nội dung GD|Noi dung giao dich|Nội dung giao dịch)[:\\s]+(.+?)(?:\\n|$)"
+        }
+      ]
+    },
+    {
       "id": "mbbank",
       "name": "MB Bank",
       "packageName": "com.mbmobile",
@@ -42,7 +60,7 @@
           "titleMatch": null,
           "bodyMatch": null,
           "bodyExclude": null,
-          "amountPattern": "([-+])([\\d.,]+)\\s*(VND|VNĐ|vnd|vnđ|đ|₫)",
+          "amountPattern": "([-+])\\s*([\\d.,]+)\\s*(VND|VNĐ|vnd|vnđ|đ|₫)",
           "descriptionPattern": "(?:ND|Noi dung|N\\.D|Nội dung|Noi dung GD|Nội dung GD|Noi dung giao dich|Nội dung giao dịch)[:\\s]+(.+?)(?:\\.|;|\\n|$)"
         }
       ]
@@ -60,7 +78,7 @@
           "titleMatch": null,
           "bodyMatch": null,
           "bodyExclude": null,
-          "amountPattern": "([-+])([\\d.,]+)\\s*(VND|VNĐ|vnd|vnđ|đ|₫)",
+          "amountPattern": "([-+])\\s*([\\d.,]+)\\s*(VND|VNĐ|vnd|vnđ|đ|₫)",
           "descriptionPattern": "(?:ND|Noi dung|N\\.D|Nội dung|Noi dung GD|Nội dung GD|Noi dung giao dich|Nội dung giao dịch)[:\\s]+(.+?)(?:\\.|;|\\n|$)"
         }
       ]
@@ -78,7 +96,7 @@
           "titleMatch": null,
           "bodyMatch": null,
           "bodyExclude": null,
-          "amountPattern": "([-+])([\\d.,]+)\\s*(VND|VNĐ|vnd|vnđ|đ|₫)",
+          "amountPattern": "([-+])\\s*([\\d.,]+)\\s*(VND|VNĐ|vnd|vnđ|đ|₫)",
           "descriptionPattern": "(?:ND|Noi dung|N\\.D|Nội dung|Noi dung GD|Nội dung GD|Noi dung giao dich|Nội dung giao dịch|Lý do|Ly do)[:\\s]+(.+?)(?:\\.|;|\\n|$)"
         }
       ]
@@ -96,29 +114,29 @@
           "titleMatch": null,
           "bodyMatch": null,
           "bodyExclude": null,
-          "amountPattern": "([-+])([\\d.,]+)\\s*(VND|VNĐ|vnd|vnđ|đ|₫)",
+          "amountPattern": "([-+])\\s*([\\d.,]+)\\s*(VND|VNĐ|vnd|vnđ|đ|₫)",
           "descriptionPattern": "(?:ND|Noi dung|N\\.D|Nội dung|Noi dung GD|Nội dung GD|Noi dung giao dich|Nội dung giao dịch)[:\\s]+(.+?)(?:\\.|;|\\n|$)"
         }
       ]
     },
     {
-  "id": "vietinbank",
-  "name": "VietinBank",
-  "packageName": "com.vietinbank.ipay",
-  "enabled": true,
-  "titleFilter": "(biến động|bien dong|thay đổi số dư|thay doi so du|số dư|so du|giao dịch|giao dich|GD|TK|iPay|IPay|ipay)",
-  "rules": [
-    {
-      "name": "Biến động số dư",
-      "type": "auto",
-      "titleMatch": null,
-      "bodyMatch": null,
-      "bodyExclude": null,
-      "amountPattern": "([-+])([\\d.,]+)\\s*(VND|VNĐ|vnd|vnđ|đ|₫)",
-      "descriptionPattern": "(?:ND|N\\.D|Noi dung|Nội dung|Noi dung GD|Nội dung GD|Noi dung giao dich|Nội dung giao dịch)[:\\s]+(.+?)(?:\\n|$)"
-    }
-  ]
-},
+      "id": "vietinbank",
+      "name": "VietinBank",
+      "packageName": "com.vietinbank.ipay",
+      "enabled": true,
+      "titleFilter": "(biến động|bien dong|thay đổi số dư|thay doi so du|số dư|so du|giao dịch|giao dich|GD|TK|iPay|IPay|ipay)",
+      "rules": [
+        {
+          "name": "Biến động số dư",
+          "type": "auto",
+          "titleMatch": null,
+          "bodyMatch": null,
+          "bodyExclude": null,
+          "amountPattern": "([-+])\\s*([\\d.,]+)\\s*(VND|VNĐ|vnd|vnđ|đ|₫)",
+          "descriptionPattern": "(?:ND|N\\.D|Noi dung|Nội dung|Noi dung GD|Nội dung GD|Noi dung giao dich|Nội dung giao dịch)[:\\s]+(.+?)(?:\\n|$)"
+        }
+      ]
+    },
     {
       "id": "acb",
       "name": "ACB",
@@ -132,7 +150,7 @@
           "titleMatch": null,
           "bodyMatch": null,
           "bodyExclude": null,
-          "amountPattern": "([-+])([\\d.,]+)\\s*(VND|VNĐ|vnd|vnđ|đ|₫)",
+          "amountPattern": "([-+])\\s*([\\d.,]+)\\s*(VND|VNĐ|vnd|vnđ|đ|₫)",
           "descriptionPattern": "(?:ND|Noi dung|N\\.D|Nội dung|Noi dung GD|Nội dung GD|Noi dung giao dich|Nội dung giao dịch)[:\\s]+(.+?)(?:\\.|;|\\n|$)"
         }
       ]
@@ -150,7 +168,7 @@
           "titleMatch": null,
           "bodyMatch": null,
           "bodyExclude": null,
-          "amountPattern": "([-+])([\\d.,]+)\\s*(VND|VNĐ|vnd|vnđ|đ|₫)",
+          "amountPattern": "([-+])\\s*([\\d.,]+)\\s*(VND|VNĐ|vnd|vnđ|đ|₫)",
           "descriptionPattern": "(?:ND|Noi dung|N\\.D|Nội dung|Noi dung GD|Nội dung GD|Noi dung giao dich|Nội dung giao dịch)[:\\s]+(.+?)(?:\\.|;|\\n|$)"
         }
       ]
@@ -168,7 +186,7 @@
           "titleMatch": null,
           "bodyMatch": null,
           "bodyExclude": null,
-          "amountPattern": "([-+])([\\d.,]+)\\s*(VND|VNĐ|vnd|vnđ|đ|₫)",
+          "amountPattern": "([-+])\\s*([\\d.,]+)\\s*(VND|VNĐ|vnd|vnđ|đ|₫)",
           "descriptionPattern": "(?:ND|Noi dung|N\\.D|Nội dung|Noi dung GD|Nội dung GD|Noi dung giao dich|Nội dung giao dịch)[:\\s]+(.+?)(?:\\.|;|\\n|$)"
         }
       ]
